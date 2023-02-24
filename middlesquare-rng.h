@@ -16,7 +16,7 @@ unsigned long pow(unsigned long base, unsigned int power)
     return result;
 }
 
-unsigned long  getSecondToSixthDigs(unsigned long preserved)
+unsigned long getSecondToSixthDigs(unsigned long preserved)
 {
     preserved = preserved % 1000000; // strip all digits until the last 6.
     preserved = preserved / 10; // remove last digit
@@ -24,7 +24,7 @@ unsigned long  getSecondToSixthDigs(unsigned long preserved)
     return preserved;
 }
 
-unsigned long  midSquareRNG(unsigned long seed)
+unsigned long midSquareRNG(unsigned long seed)
 {
     seed = pow(seed, (unsigned int)POWER); // square seed
     seed = getSecondToSixthDigs(seed); // strip the least sig. digit and anything past the 6th digit
